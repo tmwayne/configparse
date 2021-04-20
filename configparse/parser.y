@@ -26,7 +26,8 @@
 
 list:                       /* nothing */
   | list stmt EOL
-  | list EOL                { return 0; }
+//   | list EOL                { return 0; }
+  | list EOL
   ;
 
 stmt: NAME '=' NAME       { dict_set(config_dict, $1, $3); }
