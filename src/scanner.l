@@ -12,7 +12,7 @@
 
 %{
 #include <string.h>
-#include "main.h"
+#include "configparse.h"
 #include "parser.h"
 %}
 
