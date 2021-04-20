@@ -1,4 +1,4 @@
-calc:	configparse.l configparse.y configparse.h
+main:	configparse.l configparse.y configparse.h main.c
 		bison -d configparse.y
 		flex -o configparse.lex.c configparse.l
-		cc -o $@ configparse.tab.c configparse.lex.c configparse.c
+		cc -gdwarf-2 -o $@ configparse.tab.c configparse.lex.c main.c
