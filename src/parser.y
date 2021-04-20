@@ -10,7 +10,7 @@
 
 %{
 #include <stdio.h>
-#include "configparse.h"
+#include "main.h"
 %}
 
 %union {

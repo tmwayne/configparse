@@ -9,8 +9,8 @@
 #include <stdio.h>  // fprintf
 #include <stdlib.h> // calloc
 #include <string.h> // strncpy
-#include "configparse.h"
-#include "configparse.tab.h"
+#include "main.h"
+#include "parser.h"
 
 struct dict *configs;
 

@@ -12,8 +12,8 @@
 
 %{
 #include <string.h>
-#include "configparse.h"
-#include "configparse.tab.h"
+#include "main.h"
+#include "parser.h"
 %}
 
 %%

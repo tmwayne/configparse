@@ -18,7 +18,6 @@ int yylex();
 extern FILE *yyin;
 
 // program data
-
 struct elem {
   char *key;
   char *val;
@@ -37,4 +36,4 @@ void dict_set(struct dict *, char *key, char *val);
 char *dict_get(struct dict *, char *key);
 
 
-#endif
+#endif // CONFIGPARSE_INCLUDED
