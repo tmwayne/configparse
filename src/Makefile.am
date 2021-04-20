@@ -1,5 +1,4 @@
-BUILT_SOURCES = parser.h
-AM_YFLAGS = -d
-
-bin_PROGRAMS = main
-main_SOURCES = parser.y scanner.l main.c dict.c
+noinst_PROGRAMS = main
+main_SOURCES = main.c
+main_CPPFLAGS = -I$(top_srcdir)/configparse
+main_LDADD = ../configparse/libconfigparse.la

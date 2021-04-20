@@ -7,13 +7,11 @@
 //
 
 #include <stdio.h>  // fprintf
-#include <stdlib.h> // calloc
-#include <string.h> // strncpy
 #include "configparse.h"
 #include "parser.h"
 #include "dict.h"
 
-Dict_T configs;
+Dict_T config_dict;
 
 void yyerror(char *s) {
 
@@ -21,20 +19,10 @@ void yyerror(char *s) {
 
 }
 
-int main(int argc, char **argv) {
+void configparse(Dict_T configs, FILE *fd) {
 
-  if (argc == 2) {
-    if (!(yyin = fopen(argv[1], "r"))) {
-      fprintf(stderr, "Unable to open file...\n");
-      exit(EXIT_FAILURE);
-    }
-  }
-
-  configs = dict_new();
-  char *val;
-
+  yyin = fd;
+  config_dict = configs;
   yyparse();
-
-  if ((val = dict_get(configs, "a"))) printf("a: %s\n", val);
 
 }

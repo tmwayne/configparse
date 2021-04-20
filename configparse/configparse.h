@@ -11,6 +11,7 @@
 #ifndef CONFIGPARSE_INCLUDED
 #define CONFIGPARSE_INCLUDED
 
+#include <stdlib.h> // FILE
 #include "dict.h"
 
 // interface to lexer
@@ -20,6 +21,7 @@ int yylex();
 extern FILE *yyin;
 
 // program data
-extern Dict_T configs;
+extern Dict_T config_dict;
+void configparse(Dict_T, FILE *);
 
 #endif // CONFIGPARSE_INCLUDED

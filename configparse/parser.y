@@ -30,7 +30,7 @@ list:                       /* nothing */
   ;
 
 // stmt: STRING '=' STRING     { printf("key: %s, val: %s\n", $1, $3); }
-stmt: STRING '=' STRING     { dict_set(configs, $1, $3); }
+stmt: STRING '=' STRING     { dict_set(config_dict, $1, $3); }
   ; 
 
 %%
