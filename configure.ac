@@ -19,6 +19,9 @@ AC_PROG_YACC
 AC_PROG_LEX([noyywrap])
 
 # Checks for libraries.
+AC_SEARCH_LIBS([dlopen], [dl])
+AC_SEARCH_LIBS([dict_new], [dict])
+AC_SEARCH_LIBS([assert], [error])
 
 # Checks for header files.
 AC_CHECK_HEADERS([stdlib.h])
@@ -26,9 +29,7 @@ AC_CHECK_HEADERS([stdlib.h])
 # Checks for typedefs, structures, and compiler characteristics.
 
 # Checks for library functions.
-AC_SEARCH_LIBS([dlopen], [dl])
-AC_SEARCH_LIBS([dict_new], [dict])
-AC_SEARCH_LIBS([assert], [error])
+AC_CHECK_FUNCS([strdup])
 
 AC_CONFIG_FILES([
   Makefile 
