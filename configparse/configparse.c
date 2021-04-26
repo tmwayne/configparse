@@ -11,7 +11,7 @@
 #include "parser.h"
 #include "dict.h"
 
-Dict_T config_dict;
+dict_T config_dict;
 
 void yyerror(char *s) {
 
@@ -19,7 +19,7 @@ void yyerror(char *s) {
 
 }
 
-void configparse(Dict_T configs, FILE *fd) {
+void configparse(dict_T configs, FILE *fd) {
 
   yyin = fd;
   config_dict = configs;

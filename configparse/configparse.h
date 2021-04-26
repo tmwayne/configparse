@@ -21,7 +21,7 @@ int yylex();
 extern FILE *yyin;
 
 // program data
-extern Dict_T config_dict;
-void configparse(Dict_T, FILE *);
+extern dict_T config_dict;
+void configparse(dict_T, FILE *);
 
 #endif // CONFIGPARSE_INCLUDED
