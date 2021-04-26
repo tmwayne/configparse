@@ -1,1 +1,1 @@
-SUBDIRS = configparse src
+SUBDIRS = configparse src test

@@ -7,9 +7,9 @@
 //
 
 #include <stdio.h>  // fprintf
+#include <dict.h>
 #include "configparse.h"
 #include "parser.h"
-#include "dict.h"
 
 dict_T config_dict;
 

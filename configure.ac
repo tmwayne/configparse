@@ -26,11 +26,14 @@ AC_CHECK_HEADERS([stdlib.h])
 # Checks for typedefs, structures, and compiler characteristics.
 
 # Checks for library functions.
-AC_SEARCH_LIBS([dlopen])
+AC_SEARCH_LIBS([dlopen], [dl])
+AC_SEARCH_LIBS([dict_new], [dict])
+AC_SEARCH_LIBS([assert], [error])
 
 AC_CONFIG_FILES([
   Makefile 
   configparse/Makefile
-  src/Makefile])
+  src/Makefile
+  test/Makefile])
 
 AC_OUTPUT

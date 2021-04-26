@@ -8,7 +8,7 @@
 
 #include <stdio.h>        // FILE, fopen, fprintf, printf
 #include <stdlib.h>       // EXIT_FAILURE
-#include "dict.h"         // dict_T, dict_new, dict_get
+#include <dict.h>         // dict_T, dict_new, dict_get
 #include "configparse.h"  // configparse
 #include "parser.h"
 
