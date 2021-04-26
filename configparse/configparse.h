@@ -11,7 +11,7 @@
 #ifndef CONFIGPARSE_INCLUDED
 #define CONFIGPARSE_INCLUDED
 
-#include <stdlib.h> // FILE
+#include <stdio.h> // FILE
 #include "dict.h"
 
 // interface to lexer

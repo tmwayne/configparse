@@ -17,7 +17,7 @@
   char *s;
 }
 
-%token <s> NAME NUMBER
+%token <s> NAME NUMBER STRING
 %token EOL
 
 %type <s> stmt
@@ -30,7 +30,8 @@ list:                       /* nothing */
   | list EOL
   ;
 
-stmt: NAME '=' NAME       { dict_set(config_dict, $1, $3); }
+stmt: NAME '=' NAME         { dict_set(config_dict, $1, $3); }
+  | NAME '=' STRING         { dict_set(config_dict, $1, $3); }
   | NAME '=' NUMBER         { dict_set(config_dict, $1, $3); }
   ; 
 
